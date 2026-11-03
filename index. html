@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biodata Saya</title>
+<style>
+  :root {
+    --bg: #f3f6f4;
+    --surface: #ffffff;
+    --ink: #1c2b27;
+    --muted: #5d6e68;
+    --accent: #0f766e;
+    --line: #d5dfdb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121a18;
+      --surface: #1b2623;
+      --ink: #e8f0ed;
+      --muted: #9bb0a9;
+      --accent: #4fd1c0;
+      --line: #2c3b37;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  a { color: var(--accent); }
+  nav {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    display: flex; gap: 1.5rem; justify-content: center;
+    padding: .8rem 1rem;
+    font-family: system-ui, sans-serif; font-size: .95rem;
+  }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a:hover, nav a:focus-visible { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  header {
+    max-width: 960px; margin: 0 auto; padding: 4rem 1.25rem 3rem;
+    display: grid; grid-template-columns: 220px 1fr; gap: 2.5rem; align-items: center;
+  }
+  header img {
+    width: 220px; height: 280px; object-fit: cover;
+    border-radius: 110px 110px 12px 12px;
+    background: var(--line);
+  }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; margin-bottom: .6rem; }
+  .tagline { color: var(--muted); font-size: 1.15rem; max-width: 46ch; }
+
+  section { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem; }
+  h2 { font-size: 1.8rem; margin-bottom: 1.2rem; }
+
+  dl { display: grid; grid-template-columns: 11rem 1fr; gap: .6rem 1.5rem;
+       background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.5rem; }
+  dt { color: var(--muted); font-family: system-ui, sans-serif; font-size: .95rem; }
+  dd { font-weight: 600; }
+
+  .hobi { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .hobi div { background: var(--surface); border-left: 4px solid var(--accent); padding: 1rem 1.2rem; border-radius: 4px; }
+  .hobi h3 { font-size: 1.1rem; }
+  .hobi p { color: var(--muted); font-size: .95rem; }
+
+  .foto { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+  .foto figure, .video figure { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .foto img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--line); }
+  .video { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .video video { width: 100%; display: block; background: #000; }
+  figcaption { padding: .6rem .9rem; font-size: .9rem; color: var(--muted); font-family: system-ui, sans-serif; }
+  h3.sub { font-size: 1.2rem; margin: 2rem 0 .8rem; }
+
+  footer { text-align: center; padding: 2rem 1rem 3rem; color: var(--muted); font-size: .9rem; font-family: system-ui, sans-serif; }
+
+  @media (max-width: 640px) {
+    header { grid-template-columns: 1fr; text-align: center; justify-items: center; padding-top: 2.5rem; }
+    dl { grid-template-columns: 1fr; gap: 0; }
+    dd { margin-bottom: .8rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#biodata">Biodata</a>
+  <a href="#hobi">Hobi</a>
+  <a href="#galeri">Galeri</a>
+</nav>
+
+<header>
+  <!-- Ganti dengan foto profil Anda -->
+  <img src="foto/profil.jpg" alt="Foto profil">
+  <div>
+    <h1>Nama Lengkap Anda</h1>
+    <p class="tagline">Tuliskan satu kalimat singkat tentang diri Anda di sini.</p>
+  </div>
+</header>
+
+<section id="biodata">
+  <h2>Biodata</h2>
+  <dl>
+    <dt>Nama lengkap</dt><dd>Siti Marisa Saskia</dd>
+    <dt>Tempat, tanggal lahir</dt><dd>Kotabaru, 19 Maret 2026</dd>
+    <dt>Jenis kelamin</dt><dd>Perempuan</dd>
+    <dt>Agama</dt><dd>Islam</dd>
+    <dt>Alamat</dt><dd>Banjarbaru, Kalimantan Selatan</dd>
+    <dt>Pendidikan</dt><dd>Universitas Lambung Mangkurat</dd>
+    <dt>Email</dt><dd><a href="mailto:email@contoh.com">marisaskiasas19@gmail.com</a></dd>
+    <dt>Telepon</dt><dd>083101254158</dd>
+  </dl>
+</section>
+
+<section id="hobi">
+  <h2>Hobi</h2>
+  <div class="hobi">
+    <div><h3>Membaca</h3><p>Suka membaca buku dan artikel dari berbagai topik.</p></div>
+    <div><h3>Olahraga</h3><p>Rutin berolahraga untuk menjaga kesehatan.</p></div>
+    <div><h3>Musik</h3><p>Mendengarkan dan menikmati berbagai genre musik.</p></div>
+    <div><h3>Fotografi</h3><p>Mengabadikan momen dan pemandangan sekitar.</p></div>
+  </div>
+</section>
+
+<section id="galeri">
+  <h2>Galeri</h2>
+
+  <h3 class="sub">Foto</h3>
+  <div class="foto">
+    <figure><img src="foto/foto1.jpg" alt="Foto 1" loading="lazy"><figcaption>Keterangan foto 1</figcaption></figure>
+    <figure><img src="foto/foto2.jpg" alt="Foto 2" loading="lazy"><figcaption>Keterangan foto 2</figcaption></figure>
+    <figure><img src="foto/foto3.jpg" alt="Foto 3" loading="lazy"><figcaption>Keterangan foto 3</figcaption></figure>
+    <figure><img src="foto/foto4.jpg" alt="Foto 4" loading="lazy"><figcaption>Keterangan foto 4</figcaption></figure>
+    <figure><img src="foto/foto5.jpg" alt="Foto 5" loading="lazy"><figcaption>Keterangan foto 5</figcaption></figure>
+  </div>
+
+  <h3 class="sub">Video</h3>
+  <div class="video">
+    <figure>
+      <video controls preload="metadata"><source src="video/video1.mp4" type="video/mp4">Browser Anda tidak mendukung video.</video>
+      <figcaption>Keterangan video 1</figcaption>
+    </figure>
+    <figure>
+      <video controls preload="metadata"><source src="video/video2.mp4" type="video/mp4">Browser Anda tidak mendukung video.</video>
+      <figcaption>Keterangan video 2</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer>&copy; 2026 Nama Lengkap Anda</footer>
+
+</body>
+</html>
