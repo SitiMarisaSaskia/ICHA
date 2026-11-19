@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siti Marisa Saskia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Warna & font ===== */
+    :root {
+      --latar: #eef3f5;
+      --permukaan: #ffffff;
+      --teks: #17303b;
+      --teks-redup: #53707d;
+      --garis: #cddae0;
+      --aksen: #0b7a75;
+      --aksen-teks: #ffffff;
+      --aksen-hover: #095f5b;
+      --font-judul: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+      --font-isi: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --latar: #0f1d23;
+        --permukaan: #172a32;
+        --teks: #e6eff2;
+        --teks-redup: #9db6c0;
+        --garis: #2a424d;
+        --aksen: #3cc1b8;
+        --aksen-teks: #0b1a1f;
+        --aksen-hover: #6fd8d0;
+      }
+    }
+
+    /* ===== Dasar ===== */
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--latar);
+      color: var(--teks);
+      font-family: var(--font-isi);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+
+    h1, h2 {
+      font-family: var(--font-judul);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+    }
+
+    a { color: var(--aksen); }
+
+    :focus-visible {
+      outline: 3px solid var(--aksen);
+      outline-offset: 3px;
+    }
+
+    /* ===== Menu atas ===== */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      padding: 0.75rem clamp(1rem, 4vw, 3rem);
+      background: var(--permukaan);
+      border-bottom: 1px solid var(--garis);
+    }
+
+    .brand {
+      font-family: var(--font-judul);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--teks);
+      text-decoration: none;
+    }
+
+    .topbar ul {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .topbar nav a {
+      display: block;
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      color: var(--teks);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .topbar nav a:hover,
+    .topbar nav a[aria-current="page"] {
+      background: var(--aksen);
+      color: var(--aksen-teks);
+    }
+
+    /* ===== Tampilan awal ===== */
+    main {
+      flex: 1;
+      width: min(1000px, 100% - 2rem);
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: clamp(3rem, 9vw, 6rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 4.5rem);
+      font-weight: 800;
+      max-width: 14ch;
+    }
+
+    .hero .nama { color: var(--aksen); }
+
+    .hero p {
+      max-width: 52ch;
+      color: var(--teks-redup);
+      margin: 0;
+    }
+
+    /* ===== Kartu menu ===== */
+    .menu-utama {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      padding: 1.5rem 0 3rem;
+    }
+
+    .kartu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.5rem;
+      background: var(--permukaan);
+      border: 1px solid var(--garis);
+      border-left: 6px solid var(--aksen);
+      border-radius: 10px;
+    }
+
+    .kartu h2 { font-size: 1.6rem; }
+
+    .kartu p {
+      margin: 0 0 0.5rem;
+      color: var(--teks-redup);
+    }
+
+    .kartu .tombol { align-self: flex-start; margin-top: auto; }
+
+    /* daftar isi menu */
+    .isi {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      list-style: none;
+      margin: 0 0 0.75rem;
+      padding: 0;
+    }
+
+    .isi a {
+      display: block;
+      padding: 0.2rem 0.7rem;
+      border: 1px solid var(--garis);
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .isi a:hover {
+      background: var(--aksen);
+      border-color: var(--aksen);
+      color: var(--aksen-teks);
+    }
+
+    /* ===== Tombol ===== */
+    .tombol {
+      display: inline-block;
+      padding: 0.65rem 1.3rem;
+      background: var(--aksen);
+      color: var(--aksen-teks);
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .tombol:hover { background: var(--aksen-hover); }
+
+    /* ===== Kaki halaman ===== */
+    .kaki {
+      padding: 1.5rem 1rem;
+      text-align: center;
+      color: var(--teks-redup);
+      border-top: 1px solid var(--garis);
+    }
+
+    .kaki p { margin: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tombol { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="index.html" class="brand">Siti Marisa Saskia</a>
+    <nav aria-label="Menu utama">
+      <ul>
+        <li><a href="index.html" aria-current="page">Beranda</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="lain-lain.html">Lain-lain</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Hallo, Saya <span class="nama">Ichaa</span>.</h1>
+      <p>Selamat datang di website saya. Pilih menu di bawah untuk melihat biodata, galeri, atau isi lainnya.</p>
+    </section>
+
+    <section class="menu-utama" aria-label="Pilihan menu">
+
+      <article class="kartu">
+        <h2>Biodata</h2>
+        <p>Data diri saya.</p>
+        <a class="tombol" href="biodata.html">Buka Biodata</a>
+      </article>
+
+      <article class="kartu">
+        <h2>Galeri</h2>
+        <p>Foto dan video koleksi saya.</p>
+        <ul class="isi">
+          <li><a href="galeri.html#galeri-foto">Galeri Foto</a></li>
+          <li><a href="galeri.html#galeri-video">Galeri Video</a></li>
+        </ul>
+        <a class="tombol" href="galeri.html">Buka Galeri</a>
+      </article>
+
+      <article class="kartu">
+        <h2>Lain-lain</h2>
+        <p>Tugas-tugas kuliah saya.</p>
+        <ul class="isi">
+          <li><a href="lain-lain.html#tugas-1">Tugas 1</a></li>
+          <li><a href="lain-lain.html#tugas-2">Tugas 2</a></li>
+          <li><a href="lain-lain.html#tugas-3">Tugas 3</a></li>
+          <li><a href="lain-lain.html#tugas-4">Tugas 4</a></li>
+        </ul>
+        <a class="tombol" href="lain-lain.html">Buka Lain-lain</a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="kaki">
+    <p>&copy; 2026 Siti Marisa Saskia. Dibuat dengan HTML dan CSS.</p>
+  </footer>
+
+</body>
+</html>
