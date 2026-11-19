@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siti Marisa Saskia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#beranda" class="brand">Siti Marisa Saskia</a>
+    <nav aria-label="Menu utama">
+      <ul>
+        <li><a href="#biodata">Biodata</a></li>
+        <li><a href="#tugas-1">Tugas 1</a></li>
+        <li><a href="#tugas-2">Tugas 2</a></li>
+        <li><a href="#tugas-3">Tugas 3</a></li>
+        <li><a href="#tugas-4">Tugas 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="beranda" class="hero">
+      <h1>Halo, saya <span class="nama">Marisa</span>.</h1>
+      <p>Selamat datang di website saya. Di sini ada biodata, foto, video, dan tugas-tugas kuliah saya.</p>
+      <a class="tombol" href="#biodata">Lihat biodata</a>
+    </section>
+
+    <!-- BIODATA + VIDEO -->
+    <section id="biodata" class="bagian">
+      <h2>Biodata</h2>
+      <div class="biodata">
+        <img class="foto-profil" src="images/profil.jpg" alt="Foto Siti Marisa Saskia" width="240" height="300">
+        <dl class="data">
+          <div><dt>Nama lengkap</dt><dd>Siti Marisa Saskia</dd></div>
+          <div><dt>NIM</dt><dd>2410715220001</dd></div>
+          <div><dt>Tempat, tanggal lahir</dt><dd>Kotabaru, 19 Maret 2006</dd></div>
+          <div><dt>Jurusan</dt><dd>Sosial Ekonomi Perikanan</dd></div>
+          <div><dt>Kampus</dt><dd>Universitas Lambung Mangkurat</dd></div>
+          <div><dt>Alamat</dt><dd>Jl. A. Yani, Gg. Purnama 2</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:marisaskiasas19@gmail.com">marisaskiasas19@gmail.com</a></dd></div>
+          <div><dt>Hobi</dt><dd>Menggambar, Dance, Memasak</dd></div>
+        </dl>
+      </div>
+
+      <div class="biodata-foto">
+        <h3>Galeri Foto</h3>
+        <div class="galeri">
+          <figure>
+            <img src="images/foto1.jpg" alt="Foto 1" loading="lazy">
+            <figcaption>Keterangan foto 1</figcaption>
+          </figure>
+          <figure>
+            <img src="images/foto2.jpg" alt="Foto 2" loading="lazy">
+            <figcaption>Keterangan foto 2</figcaption>
+          </figure>
+          <figure>
+            <img src="images/foto3.jpg" alt="Foto 3" loading="lazy">
+            <figcaption>Keterangan foto 3</figcaption>
+          </figure>
+          <figure>
+            <img src="images/foto4.jpg" alt="Foto 4" loading="lazy">
+            <figcaption>Keterangan foto 4</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="biodata-video">
+        <h3>Video</h3>
+        <div class="video-bingkai">
+          <video controls preload="metadata" poster="images/poster-video.jpg">
+            <source src="video/video1.mp4" type="video/mp4">
+            Browser Anda tidak mendukung pemutar video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUGAS -->
+    <section id="tugas-1" class="bagian tugas">
+      <h2>Tugas 1</h2>
+      <p>Deskripsi singkat Tugas 1.</p>
+      <a class="tombol" href="tugas/tugas1.html">Buka Tugas 1</a>
+    </section>
+
+    <section id="tugas-2" class="bagian tugas">
+      <h2>Tugas 2</h2>
+      <p>Deskripsi singkat Tugas 2.</p>
+      <a class="tombol" href="tugas/tugas2.html">Buka Tugas 2</a>
+    </section>
+
+    <section id="tugas-3" class="bagian tugas">
+      <h2>Tugas 3</h2>
+      <p>Deskripsi singkat Tugas 3.</p>
+      <a class="tombol" href="tugas/tugas3.html">Buka Tugas 3</a>
+    </section>
+
+    <section id="tugas-4" class="bagian tugas">
+      <h2>Tugas 4</h2>
+      <p>Deskripsi singkat Tugas 4.</p>
+      <a class="tombol" href="tugas/tugas4.html">Buka Tugas 4</a>
+    </section>
+
+  </main>
+
+  <footer class="kaki">
+    <p>&copy; 2026 Siti Marisa Saskia. Dibuat dengan HTML dan CSS.</p>
+  </footer>
+
+</body>
+</html>
